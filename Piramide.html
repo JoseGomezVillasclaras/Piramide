@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Pirámide con JavaScript</title>
+	<style>
+		/* Estilos para los divs */
+		.container {
+			display: flex;
+			flex-wrap: wrap;
+			justify-content: space-around;
+			align-items: center;
+			background-color: #eee;
+			height: 100vh;
+		}
+		.box {
+			height: 50px;
+			width: 50px;
+			background-color: #aaa;
+			margin: 10px;
+		}
+	</style>
+</head>
+<body>
+	<!-- Divs para la página -->
+	<div class="container">
+		<div class="box" id="box1"></div>
+		<div class="box" id="box2"></div>
+		<div class="box" id="box3"></div>
+		<div class="box" id="box4"></div>
+		<div class="box" id="box5"></div>
+	</div>
+
+	<!-- Script de JavaScript para la pirámide -->
+	<script>
+		// Pedir al usuario tres números
+		let num1 = prompt("Introduce el primer número:");
+		let num2 = prompt("Introduce el segundo número:");
+		let num3 = prompt("Introduce el tercer número (posición del div a utilizar):");
+
+		// Convertir los números a enteros
+		num1 = parseInt(num1);
+		num2 = parseInt(num2);
+		num3 = parseInt(num3);
+
+		// Obtener el div correspondiente
+		let div = document.getElementById("box" + num3);
+
+		// Crear la pirámide en el div seleccionado
+		let output = "";
+		for (let i = 1; i <= num2; i++) {
+			for (let j = 1; j <= i; j++) {
+				output += num1 + " ";
+			}
+			output += "<br>";
+		}
+		div.innerHTML = output;
+	</script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tres columnas con fondo gris</title>
+        
+    <style>
+		/* Establecer el tamaño y la posición de los divs */
+		.top-div {
+			width: 50%;
+			height: 100px;
+			background-color: #ccc;
+			float: left;
+		}
+
+		.center-div {
+            display: flex;
+            justify-content: center;
+			width: 100%;
+			height: 300px;
+			background-color: #fff;
+			clear: both;
+		}
+
+		.bottom-div {
+			width: 50%;
+			height: 100px;
+			background-color: #ccc;
+			float: left;
+		}
+
+        .content{
+            background-color: grey;
+            min-width: 50px;
+            min-height: 50px;
+        }
+		/* Establecer la posición de los divs superiores */
+		#top-left {
+            display: flex;
+			float: left;
+		}
+
+		#top-right {
+            justify-content: flex-end;
+            display: flex;
+			float: right;
+		}
+
+		/* Establecer la posición de los divs inferiores */
+		#bottom-left {
+            display: flex;
+			clear: left;
+			float: left;
+            
+		}
+
+		#bottom-right {
+            justify-content: flex-end;
+            display: flex;
+			clear: right;
+			float: right;   
+            align-items: flex-start;
+            
+		}
+        #c1{
+            align-self: flex-start;
+            text-align: center;
+        }
+        #c2{
+            align-self: flex-start; 
+            text-align: center;
+        }
+        #c3{
+            align-self: center;
+            text-align: center;
+        }
+        #c4{
+            align-self: flex-start;
+            text-align: center;
+        }
+        #c5{
+            align-self: flex-start; 
+            text-align: center;
+        }
+	</style>
+</head>
+<body>
+	<!-- Div superior izquierdo -->
+	<div class="top-div" id="top-left">
+        <div class="content" id="c1">1</div>
+    </div>
+
+	<!-- Div superior derecho -->
+	<div class="top-div" id="top-right">
+        <div class="content" id="c2">2</div>
+    </div>
+
+	<!-- Div central -->
+	<div class="center-div">
+        <div class="content" id="c3">3</div>
+    </div>
+
+	<!-- Div inferior izquierdo -->
+	<div class="bottom-div" id="bottom-left">
+        <div class="content" id="c4">4</div>
+    </div>
+
+	<!-- Div inferior derecho -->
+	<div class="bottom-div" id="bottom-right">
+        <div class="content" id="c5">5</div>
+    </div>
+
+    <script src="./flex2.js"></script>
+
+</body>
+
+</html>
