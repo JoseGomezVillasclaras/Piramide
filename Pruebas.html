@@ -2,8 +2,9 @@
 <html>
     <head>
         <title>Tres columnas con fondo gris</title>
-        
+        <link rel="stylesheet" href="cuadricula.css">
     <style>
+        
 		/* Establecer el tamaño y la posición de los divs */
 		.top-div {
 			width: 50%;
@@ -86,30 +87,31 @@
 <body>
 	<!-- Div superior izquierdo -->
 	<div class="top-div" id="top-left">
-        <div class="content" id="c1">1</div>
+        <div class="content" id="c1" onclick="saludar('1')">1</div>
     </div>
 
 	<!-- Div superior derecho -->
 	<div class="top-div" id="top-right">
-        <div class="content" id="c2">2</div>
+        <div class="content" id="c2" ondblclick="cambiarColor('2')">2</div>
     </div>
 
 	<!-- Div central -->
 	<div class="center-div">
-        <div class="content" id="c3">3</div>
+        <div class="content" id="c3" onclick="saludar('3')">3</div>
     </div>
 
 	<!-- Div inferior izquierdo -->
 	<div class="bottom-div" id="bottom-left">
-        <div class="content" id="c4">4</div>
+        <div class="content" id="c4" onclick="saludar('4')">4</div>
     </div>
 
 	<!-- Div inferior derecho -->
 	<div class="bottom-div" id="bottom-right">
-        <div class="content" id="c5">5</div>
+        <div class="content" id="c5" onclick="saludar('5')">5</div>
     </div>
 
     <script src="./flex2.js"></script>
+    
 
 </body>
 
